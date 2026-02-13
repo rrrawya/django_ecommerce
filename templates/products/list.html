@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}قائمة المنتجات{% endblock %}
+
+{% block content %}
+<style>
+    /* هيدر الصفحة بتدرج لوني مختلف لتمييز صفحة المنتجات */
+    .product-header {
+        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        color: white;
+        padding: 50px 0;
+        border-radius: 0 0 50px 50px;
+        margin-bottom: 40px;
+    }
+
+    .product-card {
+        border: none;
+        border-radius: 20px;
+        transition: all 0.4s ease;
+        background: #ffffff;
+        overflow: hidden;
+    }
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+    }
+
+    .price-tag {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #11998e;
+    }
+
+    .product-icon-box {
+        width: 60px;
+        height: 60px;
+        background: #f0fdf4;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        color: #11998e;
+        font-size: 1.4rem;
+    }
+
+    .btn-buy {
+        border-radius: 10px;
+        background-color: #11998e;
+        border: none;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .btn-buy:hover {
+        background-color: #0d7a71;
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="product-header text-center">
+    <h1 class="display-5 fw-bold">منتجاتنا</h1>
+    <p class="lead opacity-75">تم العثور على {{ products|length }} منتجات</p>
+</div>
+
+<div class="container mb-5">
+    <div class="row g-4">
+        {% for product in prod %}
+        <div class="col-md-4 col-lg-3">
+          <div class="card product-card shadow-sm h-100 overflow-hidden">
+            <div style="height: 200px; overflow: hidden;">
+                <img src="{{ product.image }}" class="card-img-top w-100 h-100" style="object-fit: cover;" alt="{{ product.name }}">
+            </div>
+
+    <div class="card-body text-center d-flex flex-column">
+        <h5 class="card-title fw-bold text-dark mb-2">{{ product.name }}</h5>
+        
+        <div class="mb-3 mt-auto">
+            <span class="price-tag d-block text-primary fs-4 fw-bold">{{ product.price }} ر.س</span>
+        </div>
+
+        <button class="btn btn-primary btn-buy w-100 py-2">
+            إضافة للسلة
+        </button>
+    </div>
+</div>
+        </div>
+        {% empty %}
+        <div class="col-12 text-center py-5">
+            <h3 class="text-muted">نأسف، لا توجد منتجات حالياً في هذا القسم.</h3>
+            <a href="/" class="btn btn-outline-secondary mt-3">العودة للفئات</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
