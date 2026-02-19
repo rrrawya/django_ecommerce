@@ -63,8 +63,29 @@
     <h1 class="display-5 fw-bold">منتجاتنا</h1>
     <p class="lead opacity-75">تم العثور على {{ products|length }} منتجات</p>
 </div>
-
+  
 <div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form action="">
+                <ul class="list-inline d-flex justify-content-end">
+                     <li class="list-inline-item"> 
+                         <button class="btn btn-primary" type="submit">
+                          بحث
+                         </button>
+                   </li>
+                    <li class="list-inline-item">
+                         <input type="text" name="search" class="form-control form-control-lg" placeholder="ابحث عن منتج">
+                    </li>
+                   
+                </ul>
+               
+               
+               </div>
+            </form>
+        </div>
+
+    </div>
     <div class="row g-4">
         {% for product in prod %}
         <div class="col-md-4 col-lg-3">
@@ -77,12 +98,16 @@
         <h5 class="card-title fw-bold text-dark mb-2">{{ product.name }}</h5>
         
         <div class="mb-3 mt-auto">
-            <span class="price-tag d-block text-primary fs-4 fw-bold">{{ product.price }} ر.س</span>
+            <span class="price-tag d-block text-primary fs-4 fw-bold">{{ product.price|floatformat:2 }} ر.س</span>
         </div>
-
-        <button class="btn btn-primary btn-buy w-100 py-2">
-            إضافة للسلة
+         <div class="d-flex gap-2">
+            <button class="btn btn-success btn-success w-100 py-2">
+           تفاصيل
         </button>
+        <a class="btn btn-primary btn-buy w-100 py-2" href="{% url 'add_to_cart' %}">
+            إضافة للسلة
+        </a>
+         </div>
     </div>
 </div>
         </div>

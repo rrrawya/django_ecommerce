@@ -1,3 +1,4 @@
+
 """
 Django settings for homeproject project.
 
@@ -77,8 +78,13 @@ WSGI_APPLICATION = 'homeproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ecommerce',
+        'USER':'root',
+        'PASSWORD':'182005',
+        'HOST':'localhost',
+        'PORT':'3306'
+
     }
 }
 

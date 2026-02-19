@@ -56,7 +56,10 @@
     <h1 class="display-4 fw-bold">استكشف أقسامنا</h1>
     <p class="lead opacity-75">تصفح المنتجات حسب الفئة المختارة</p>
 </div>
-
+    <h1 class="text-center ">{{request.session.m}}</h1>
+     <h1 class="text-center ">{{request.session.price}}</h1>
+      <h1 class="text-center ">{{request.session.value}}</h1>
+     <h1 class="text-center ">{{request.COOKIES.user}}</h1>
 <div class="container">
     <div class="row g-4 justify-content-center">
         {% for category in cat %}
