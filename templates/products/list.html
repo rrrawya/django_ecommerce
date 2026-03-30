@@ -6,7 +6,7 @@
 <style>
     /* هيدر الصفحة بتدرج لوني مختلف لتمييز صفحة المنتجات */
     .product-header {
-        background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        background: linear-gradient(135deg, #c583b0 0%, #d285c0 100%);
         color: white;
         padding: 50px 0;
         border-radius: 0 0 50px 50px;
@@ -29,7 +29,7 @@
     .price-tag {
         font-size: 1.5rem;
         font-weight: bold;
-        color: #11998e;
+        color: #c37cbd;
     }
 
     .product-icon-box {
@@ -41,27 +41,27 @@
         align-items: center;
         justify-content: center;
         margin: 0 auto 15px;
-        color: #11998e;
+        color: #b3809d;
         font-size: 1.4rem;
     }
 
     .btn-buy {
         border-radius: 10px;
-        background-color: #11998e;
+        background-color: #cc8ebb;
         border: none;
         font-weight: 600;
         transition: 0.3s;
     }
 
     .btn-buy:hover {
-        background-color: #0d7a71;
+        background-color: #c479b2;
         transform: scale(1.05);
     }
 </style>
 
 <div class="product-header text-center">
     <h1 class="display-5 fw-bold">منتجاتنا</h1>
-    <p class="lead opacity-75">تم العثور على {{ products|length }} منتجات</p>
+    <p class="lead opacity-75">تم العثور على 4 منتجات</p>
 </div>
   
 <div class="container mb-5">
@@ -91,7 +91,7 @@
         <div class="col-md-4 col-lg-3">
           <div class="card product-card shadow-sm h-100 overflow-hidden">
             <div style="height: 200px; overflow: hidden;">
-                <img src="{{ product.image }}" class="card-img-top w-100 h-100" style="object-fit: cover;" alt="{{ product.name }}">
+                <img src="{{ product.image.url }}" class="card-img-top w-100 h-100" style="object-fit: cover;" alt="{{ product.name }}">
             </div>
 
     <div class="card-body text-center d-flex flex-column">
@@ -101,10 +101,10 @@
             <span class="price-tag d-block text-primary fs-4 fw-bold">{{ product.price|floatformat:2 }} ر.س</span>
         </div>
          <div class="d-flex gap-2">
-            <button class="btn btn-success btn-success w-100 py-2">
+            <a class="btn btn-success btn-success w-100 py-2"  href="{% url 'details' product.id %}">
            تفاصيل
-        </button>
-        <a class="btn btn-primary btn-buy w-100 py-2" href="{% url 'add_to_cart' %}">
+            </a>
+        <a class="btn btn-primary btn-buy w-100 py-2" href="{% url 'add_to_cart' product.id %}">
             إضافة للسلة
         </a>
          </div>

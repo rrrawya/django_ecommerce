@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% csrf_token %}
+<div class="container py-5">
+    <a href="{% url 'list' %}" class="btn btn-outline-secondary mb-4">
+        <i class="fas fa-arrow-right"></i> العودة للمنتجات
+    </a>
+
+    <div class="row g-5">
+        <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                <img src="{{ product.image.url }}" class="img-fluid" alt="{{ product.name }}" style="max-height: 500px; border-radius: 20px;">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <span class="badge bg-soft-primary text-primary mb-2 px-3 py-2 rounded-pill">
+                {{ product.category.name }}
+            </span>
+            
+            <h1 class="display-5 fw-bold mb-3">{{ product.name }}</h1>
+            
+            <div class="d-flex align-items-center mb-4">
+                <span class="h2 fw-bold text-success mb-0">{{ product.price|floatformat }} ر.س</span>
+                {% if product.stock > 0 %}
+                    <span class="ms-3 badge bg-success-subtle text-success border border-success">متوفر في المخزن</span>
+                {% else %}
+                    <span class="ms-3 badge bg-danger-subtle text-danger border border-danger">غير متوفر حالياً</span>
+                {% endif %}
+            </div>
+
+            <hr class="opacity-10">
+
+            <div class="product-description mb-4">
+                <h5 class="fw-bold"><i class="fas fa-align-right me-2"></i> وصف المنتج</h5>
+                <p class="text-muted lh-lg">
+                  
+                </p>
+            </div>
+
+           
+            <div class="row g-3 mb-4">
+                <div class="col-6">
+                    <div class="p-3 border rounded-3 bg-light">
+                        <small class="text-muted d-block">الماركة</small>
+                        <strong>{{ product.details.brand }}</strong>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border rounded-3 bg-light">
+                        <small class="text-muted d-block">الكمية</small>
+                        <strong>{{ product.details.stock }} قطعة</strong>
+                    </div>
+                </div>
+            </div>
+
+             <div class="row g-3 mb-4">
+                <div class="col-6">
+                    <div class="p-3 border rounded-3 bg-light">
+                        <small class="text-muted d-block">الماركة</small>
+                        <strong>{{ product.details.brand }}</strong>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border rounded-3 bg-light">
+                        <small class="text-muted d-block">الكمية</small>
+                        <strong>{{ product.details.description }} قطعة</strong>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="d-grid gap-2">
+                <button onclick="addToCart()" class="btn btn-primary btn-lg py-3 rounded-3 fw-bold">
+                    <i class="fas fa-shopping-cart me-2"></i> إضافة إلى السلة
+                </button>
+                <button class="btn btn-outline-dark btn-lg py-3 rounded-3">
+                    <i class="fas fa-heart me-2"></i> إضافة للمفضلة
+                </button>
+            </div>
+        </div>
+    </div>
+    {%endblock%}
