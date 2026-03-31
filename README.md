@@ -26,38 +26,50 @@ Developed a dynamic e-commerce web application using Django, enabling users to b
   ## 📸 Screenshots
 
 ### Home Page
-![Home Page](<img width="1892" height="824" alt="Screenshot 2026-03-30 044311" src="https://github.com/user-attachments/assets/b29e20f0-cc8c-4e77-b275-efbc06ce29af" />)
+![Home Page](<img width="1892" height="824" alt="Screenshot 2026-03-30 044311" src="https://github.com/user-attachments/assets/5c6de26e-180d-4bb8-96db-de6cd69f649a" />
+
+)
 
 
 ---
 
 ### Login Page
-![Login Page](<img width="1916" height="823" alt="Screenshot 2026-03-31 182531" src="https://github.com/user-attachments/assets/a06830a5-63a6-4938-8ccf-555170efd87d" />)
+![Login Page](<img width="1916" height="823" alt="Screenshot 2026-03-31 182531" src="https://github.com/user-attachments/assets/016ba886-c0d4-45bf-963c-0045f8e06dd0" />
+
+)
 
 
 ---
 
 ### Contact Us
-![Contact Us](<img width="1889" height="817" alt="Screenshot 2026-03-30 044334" src="https://github.com/user-attachments/assets/44301bee-c663-4f2f-8fa3-8395063e8cff" />)
+![Contact Us](<img width="1889" height="817" alt="Screenshot 2026-03-30 044334" src="https://github.com/user-attachments/assets/aad1295d-528a-437f-91b3-6c62a6915148" />
+
+)
 
 ---
 
 
 ### Product Details
-![Product Details](<img width="1893" height="814" alt="Screenshot 2026-03-30 043937" src="https://github.com/user-attachments/assets/51409aa8-ed65-46bd-ae2b-d46ebc7f94e1" />)
+![Product Details](<img width="1893" height="814" alt="Screenshot 2026-03-30 043937" src="https://github.com/user-attachments/assets/1f3496d5-e537-47ea-95ba-d3c94b3fcd25" />
+
+)
 
 
 ---
 
 
 ### Shopping Cart
-![Shopping Cart](<img width="1919" height="623" alt="Screenshot 2026-03-30 044854" src="https://github.com/user-attachments/assets/9218f8ba-c7df-4998-8f1a-496bdc983b9c" />)
+![Shopping Cart](<img width="1919" height="623" alt="Screenshot 2026-03-30 044854" src="https://github.com/user-attachments/assets/9f019067-5176-4079-9d93-43e6df6a00ea" />
+
+)
 
 ---
 
 ### Product Search
 
-![Product Search](<img width="1897" height="799" alt="Screenshot 2026-03-30 044723" src="https://github.com/user-attachments/assets/c2bedb7e-fadb-41ff-bd27-e5416cca04d7" />)
+![Product Search](<img width="1897" height="799" alt="Screenshot 2026-03-30 044723" src="https://github.com/user-attachments/assets/faf4f679-a1a3-4144-b298-19ea533d94ff" />
+
+)
 
 ---
 
