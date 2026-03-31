@@ -26,9 +26,9 @@ Developed a dynamic e-commerce web application using Django, enabling users to b
   ## 📸 Screenshots
 
 ### Home Page
-![Home Page](<img width="1892" height="824" alt="Screenshot 2026-03-30 044311" src="https://github.com/user-attachments/assets/5c6de26e-180d-4bb8-96db-de6cd69f649a" />
+<img width="1892" height="824" alt="Screenshot 2026-03-30 044311" src="https://github.com/user-attachments/assets/5c6de26e-180d-4bb8-96db-de6cd69f649a" />
 
-)
+
 
 
 ---
